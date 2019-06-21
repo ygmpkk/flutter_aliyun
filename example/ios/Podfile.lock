@@ -1,0 +1,36 @@
+PODS:
+  - aliyun (0.0.1):
+    - AliyunSlsObjc (= 1.1.7)
+    - Flutter
+  - AliyunSlsObjc (1.1.7):
+    - AliyunSlsObjc/no-arc (= 1.1.7)
+    - Protobuf (~> 3.6.1)
+  - AliyunSlsObjc/no-arc (1.1.7):
+    - Protobuf (~> 3.6.1)
+  - Flutter (1.0.0)
+  - Protobuf (3.6.1)
+
+DEPENDENCIES:
+  - aliyun (from `.symlinks/plugins/aliyun/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AliyunSlsObjc
+    - Protobuf
+
+EXTERNAL SOURCES:
+  aliyun:
+    :path: ".symlinks/plugins/aliyun/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+
+SPEC CHECKSUMS:
+  aliyun: c4c2353745607ac1e6bd5f8a8e25dde7c5bb7050
+  AliyunSlsObjc: 455389ddd2a21e9978f027b6c0a88da8fba7e76b
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+
+PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
+
+COCOAPODS: 1.5.3
