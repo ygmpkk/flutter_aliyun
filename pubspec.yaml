@@ -1,6 +1,6 @@
 name: aliyun
 description: A Simple implemation libaray for aliyun sts, log and oss for Flutter.
-version: 0.0.1
+version: 0.0.3
 author: Timothy<ygmpkk@gmail.com>
 homepage: https://github.com/ygmpkk/flutter_aliyun
 

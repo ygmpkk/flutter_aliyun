@@ -16,6 +16,8 @@ A new flutter plugin project.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'AliyunSlsObjc', '1.1.7'
+  s.dependency 'AliyunLogObjc', '1.1.7'
+  
 
   s.ios.deployment_target = '8.0'
 end
