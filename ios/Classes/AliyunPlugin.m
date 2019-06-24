@@ -1,5 +1,5 @@
 #import "AliyunPlugin.h"
-#import <AliyunLogObjc/AliyunLogObjc.h>
+@import AliyunLOGiOS;
 
 @implementation AliyunPlugin {
   NSString *channel;
@@ -38,6 +38,10 @@
 
   channel = call.arguments[@"channel"];
 
+  if ([self isBlankString:channel]) {
+    channel = @"app_store";
+  }
+
   BOOL enableLog = [call.arguments[@"enableLog"] boolValue];
   if (enableLog) {
     NSLog(@"ALI: project => %@", project);
@@ -47,17 +51,19 @@
     NSLog(@"ALI: channel => %@", channel);
     NSLog(@"ALI: enableLog => %d", enableLog);
   }
+    
 
-  client = [[LogClient alloc] initWithApp:endpoint
+  client = [[ alloc] initWithApp:endpoint
                               accessKeyID:accessKeyId
                           accessKeySecret:accessKeySecret
                               projectName:project
-                            serializeType:AliSLSJSONSerializer];
+                              serializeType:AliSLSProtobufSerializer];
 
-  if (securityToken != nil && securityToken != NULL) {
+  if (![self isBlankString:securityToken]) {
     NSLog(@"ALI: use securityToken");
     [client SetToken:securityToken];
   }
+    
 
   result(nil);
 }
@@ -69,12 +75,7 @@
   NSLog(@"ALI post => topic: %@", topic);
   NSLog(@"ALI post => data: %@", data);
 
-  if (channel == nil) {
-    channel = @"app_store";
-  }
-
-  RawLogGroup *logGroup = [[RawLogGroup alloc] initWithTopic:topic
-                                                   andSource:channel];
+  RawLogGroup *logGroup = [[RawLogGroup alloc] initWithTopic:topic andSource:channel];
   RawLog *logInfo = [[RawLog alloc] init];
 
   for (NSString *key in data) {
@@ -97,6 +98,22 @@
               }];
 
   result(nil);
+}
+
+- (BOOL)isBlankString:(NSString *)string {
+  if (string == nil || string == NULL) {
+    return YES;
+  }
+
+  if ([string isKindOfClass:[NSNull class]]) {
+    return YES;
+  }
+  if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet
+                                                   whitespaceCharacterSet]]
+          length] == 0) {
+    return YES;
+  }
+  return NO;
 }
 
 @end

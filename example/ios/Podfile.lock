@@ -1,14 +1,11 @@
 PODS:
   - aliyun (0.0.1):
-    - AliyunSlsObjc (= 1.1.7)
     - Flutter
-  - AliyunSlsObjc (1.1.7):
-    - AliyunSlsObjc/no-arc (= 1.1.7)
-    - Protobuf (~> 3.6.1)
-  - AliyunSlsObjc/no-arc (1.1.7):
-    - Protobuf (~> 3.6.1)
+    - FMDB (>= 2.7.5)
   - Flutter (1.0.0)
-  - Protobuf (3.6.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
 
 DEPENDENCIES:
   - aliyun (from `.symlinks/plugins/aliyun/ios`)
@@ -16,8 +13,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AliyunSlsObjc
-    - Protobuf
+    - FMDB
 
 EXTERNAL SOURCES:
   aliyun:
@@ -26,11 +22,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  aliyun: c4c2353745607ac1e6bd5f8a8e25dde7c5bb7050
-  AliyunSlsObjc: 455389ddd2a21e9978f027b6c0a88da8fba7e76b
+  aliyun: 0fa142367481ff591a41a5163afce8fa26c79fc3
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
 
-PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
+PODFILE CHECKSUM: 2ff05abcaeab169192c5383a600b7a086c3f29ba
 
 COCOAPODS: 1.5.3
