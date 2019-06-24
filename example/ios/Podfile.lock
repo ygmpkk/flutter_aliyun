@@ -1,7 +1,7 @@
 PODS:
   - aliyun (0.0.1):
     - Flutter
-    - FMDB (>= 2.7.5)
+    - FMDB
   - Flutter (1.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
-  aliyun: 0fa142367481ff591a41a5163afce8fa26c79fc3
+  aliyun: c2d4c8740859714b591c6346cd45af6b7f93ef83
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
 
-PODFILE CHECKSUM: 2ff05abcaeab169192c5383a600b7a086c3f29ba
+PODFILE CHECKSUM: f65118fff3378b4d0e88af48fcc5656f4ee85320
 
 COCOAPODS: 1.5.3

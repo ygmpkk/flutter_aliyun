@@ -14,12 +14,8 @@ A new flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
-
   s.dependency 'Flutter'
-  s.dependency 'FMDB', '>= 2.7.5'
-
-  s.static_framework = true
-  # s.swift_version = '4.2'
+  s.dependency 'FMDB'
   s.ios.deployment_target = '8.0'
 end
 
